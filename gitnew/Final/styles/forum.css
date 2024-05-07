@@ -1,0 +1,166 @@
+body {
+    background: #1c1414;
+}
+
+.forumstuff {
+    padding: 20px;
+}
+.forumstuff video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    background-color: #1c1414;
+}
+.container {
+    max-width: 95%;
+    max-height: 80%;
+    margin: 0 auto;
+}
+.head h1 {
+    font-size: 40px;
+    width: 250px;
+    margin-bottom: 5px;
+    font-family: monospace;
+    color: #8c0404;
+}
+.text {
+    max-height: 70%;
+    margin-bottom: auto;
+}
+.commentBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d4d4d4;
+    font-family: monospace;
+    box-shadow: 0 -2px 5px #000;
+    z-index: 1000;
+}
+.commentBox .content {
+    margin-bottom: 5px;
+}
+#comment {
+    color: #8c0404;
+    font-family: monospace;
+    font-size: large;
+}
+.commentss {
+    color: #8c0404;
+    font-family: monospace;
+}
+
+.user {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.usercomment {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.commentInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.buttons {
+    flex-shrink: 0;
+}
+button {
+    padding: 10px 10px;
+    font-size: 40px;
+    background-color: #d4d4d4;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:disabled {
+    background-color: #d4d4d4;
+}
+.left-comment {
+    color: #8c0404;
+    font-family: monospace;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 3px solid black;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    background: #d4d4d4;
+    text-align: left;
+}
+.right-comment {
+    color: #8c0404;
+    font-family: monospace;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 3px solid black;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    background: #d4d4d4;
+    text-align: right;
+}
+.parents {
+    display: flex;
+    align-items: flex-start;
+}
+.comments {
+    max-height: calc(100vh - 335px);
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #8c0404;
+    font-family: monospace;
+}
+
+.nope {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.line::selection {
+    background-color: transparent;
+}
+
+.line::-moz-selection {
+    background-color: transparent;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+}
+
+.tab-container.tabs {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tab-container.tabs a {
+    display: inline-block;
+    background: #8c0404;
+    color: #1c1414;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px 25px 5px 15px;
+    --webkit-clip-path: polygon(100% 0, 90% 0, 100% 100%, 0 100%, 0.5% 0);
+    clip-path: polygon(100% 0, 90% 0, 100% 100%, 0 100%, 0.5% 0);
+}

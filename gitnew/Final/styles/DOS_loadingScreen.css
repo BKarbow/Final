@@ -1,0 +1,39 @@
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .loading-container {
+    width: 320px;
+    height: 200px;
+    position: relative;
+    border: 2px solid #0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .loading-circle {
+    fill: none;
+    stroke: #0f0;
+    stroke-width: 2;
+    stroke-dasharray: 0 1000;
+    animation: drawCircle 3s ease forwards;
+  }
+  @keyframes drawCircle {
+    100% {
+      stroke-dasharray: 1000 1000;
+    }
+  }
+  .loading-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    text-align: center;
+  }

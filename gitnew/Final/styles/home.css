@@ -1,0 +1,211 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #1c1414; /* Updated background color */
+  color: #8c0404; /* Updated text color */
+  font-family: 'Arial Black', Gadget, sans-serif; /* Bolder, more "proud" font */
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px; /* Adjusted to padding-top to avoid overlap with navbar */
+  padding-bottom: 100px;
+}
+
+#navbar {
+  position: fixed; /* Make the navbar fixed to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Added to correct navbar height */
+  background-color: #2c2c2c; /* Navbar background color */
+  color: #646464; /* Navbar item color */
+  z-index: 10; /* Ensure navbar stays on top of other content */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  font-family: 'Arial, sans-serif';
+  font-size: 16px;
+}
+
+h1, p, a, button {
+  color: #8c0404; /* Ensure all text elements use the updated text color */
+  font-size: 18px; /* Increased font size for better readability */
+}
+
+p {
+  color: #8c0404; 
+  max-width: 600px;
+  line-height: 1.8; 
+  margin-bottom: 20px;
+}
+
+a {
+  color: #0a84ff; /* Soft blue for links */
+  text-decoration: none;
+  border-radius: 5px; /* Rounded corners for a friendlier look */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a:hover {
+  color: #0066cc; /* Darker shade of blue on hover */
+  text-decoration: underline;
+}
+
+button {
+  background-color: #0a84ff; /* Soft blue for buttons */
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px; /* More pronounced rounded corners for a modern, soft look */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #0066cc; /* Darker blue for button hover state */
+}
+
+#eye-container {
+  margin-top: 1300px;
+  position: relative;
+  width: 1280px; /* Adjust the width and height according to your eye image */
+  height: 1020px; /* Adjust the width and height according to your eye image */
+  filter: blur(40px); /* Initial blur effect */
+  animation: eye-container_blurFade 1.5s ease forwards; /* Animation for transitioning from blurry to non-blurry */
+}
+
+#nations-eye-header {
+  font-size: 100px;
+  color: #8D0000;
+  filter: blur(0); /* Updated to ensure no blur in any state. */
+  animation: nations-eye-header_opacityFade 2.5s ease forwards;
+}
+
+@keyframes eye-container_blurFade {
+  from {
+    filter: blur(40px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes nations-eye-header_opacityFade {
+  from {
+    filter: opacity(0%);
+  }
+  to {
+    filter: opacity(100%);
+  }
+}
+
+#eye {
+  margin-top: 150px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#pupil {
+  width: 30px;
+  height: 30px;
+  background-color: #D4D4D4;
+  border-radius: 50%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#pupil:hover {
+  cursor: pointer;
+}
+
+#propaganda_poster {
+  border-radius: 10%;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px; /* Adjust to account for navbar height in mobile */
+    justify-content: flex-start; /* Align content to the top in mobile view */
+  }
+
+  #eye-container, #pupil {
+    display: none;
+  }
+
+  #eye-container, #nations-eye-header {
+    animation: none;
+  }
+
+  #nations-eye-header {
+    filter: blur(0); /* Ensure text is not blurred in mobile view */
+  }
+}
+
+.nope {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+
+/* breaking news */ 
+footer .news-container {
+  position: fixed;
+  top: 78px;
+  right: 0;
+  left: 0;
+  font-size: 20px;
+  background: #2c2c2cb8;
+  color: #8c04049d;
+  display: flex;
+  overflow: hidden;
+}
+
+footer .news-container .news-heading {
+  font-weight: bold;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.news-heading {
+  margin-left: 20px;
+}
+
+footer .news-container .news {
+  position: relative;
+  width: 100%;
+}
+
+footer .news-container .news-single {
+  color: #8c04047f;
+  text-decoration: none;
+  font-weight: normal;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-8px);
+  transition: all 400ms ease;
+}
+
+footer .news-container .news-single.active {
+  opacity: 1;
+  transform: translateY(0);
+}

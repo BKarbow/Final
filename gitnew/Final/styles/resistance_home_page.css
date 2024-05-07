@@ -1,0 +1,88 @@
+.green-text {
+  color: green;
+}
+
+.white-text {
+  color: white;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+#secret_home_page_ascii_text_logo {
+    color: green;
+    white-space: pre;
+    overflow: hidden;
+    border-top-left-radius: .15em solid green;
+    font-family: monospace;
+    font-size: 1.2em;
+    animation: ascii_text_typing 5s steps(40) forwards;
+}
+
+@keyframes ascii_text_typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+
+
+/* LOGO CONTAINER */
+#backdoor_dos_logo_container {
+  display: grid;
+  grid-template-rows: repeat(1, 400px); 
+  grid-template-columns: repeat(1, 900px);
+  grid-auto-rows: 100px; 
+  justify-content: center;
+  margin-top: 900px;
+  margin-bottom: 100px;
+}
+
+.backdoor_dos_logo-item {
+  border: 3px dashed green;
+}
+
+.backdoor_dos_logo-item-1 {
+  grid-row: 1 / 1;
+  grid-column: 1 / 6;
+}
+
+
+/* BUTTERFLY AND INFO BRIEFING */
+#butterflies-and-info-briefing-container {
+  display: grid;
+  grid-template-rows: repeat(2, 300px); 
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: 100px; 
+  justify-content: center;
+  margin-bottom: 300px;
+}
+
+.butterflies-and-info-briefing-item {
+  border: 3px dashed green;
+  margin: 10px;
+}
+
+.butterflies-and-info-briefing-item-1 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 2;
+}
+
+.butterflies-and-info-briefing-item-2 {
+  grid-row: 2 / 2;
+  grid-column: 1 / 1;
+}
+
+.butterflies-and-info-briefing-item-3 {
+  grid-row: 2 / 2;
+  grid-column: 3 / 3;
+}
